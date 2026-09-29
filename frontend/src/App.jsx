@@ -3,7 +3,7 @@ import axios from 'axios';
 import { CheckCircle2, Circle, Trash2, BookOpen, Clock, Calendar, PlusCircle } from 'lucide-react';
 import './App.css';
 
-const API_BASE = 'http://localhost:5000/api/tasks';
+const API_BASE = '/api/tasks';
 
 export default function App() {
   const [tasks, setTasks] = useState([]);
