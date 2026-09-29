@@ -76,7 +76,7 @@ app.delete('/api/tasks/:id', (req, res) => {
 });
 
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
-app.get("*", (req, res) => res.sendFile(path.join(__dirname, "../frontend/dist", "index.html")));
+app.use( (req, res) => res.sendFile(path.join(__dirname, "../frontend/dist", "index.html")));
 
 app.listen(PORT, () => {
   console.log(`Backend server running on http://localhost:${PORT}`);
